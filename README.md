@@ -43,7 +43,7 @@ chmod +x tfc-psm-install
 Download installer via my bootstrap server (iac.sh or <https://iac.sh)>
 
 ``` shell
-curl iac.sh/tfc-psm-install.sh | sh
+curl iac.sh/tfc-psm.sh | sh
 # downloads installer as tfc-psm-install.sh in current directory
 ```
 
