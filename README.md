@@ -1,4 +1,4 @@
-# Installer for HashiCorp Terraform - Automated Installation
+# Installer for Terraform Cloud Policy Sets Migration Utility
 
 ## Automatically Download, Extract and Install Latest or Specific Version
 
