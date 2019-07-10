@@ -8,7 +8,7 @@
 
 ---
 
-The **tfc-psm-install** script automates the process of downloading and installing Terraform.  It provides an ideal method for installing installing updates or a specific version.
+The **tfc-psm-install** script automates the process of downloading and installing the `tfc-policy-sets-migration` utility.
 
 This script detects the latest version, OS and CPU-Architecture and allows installation to local or system locations.  Optional parameters allow installing a specific version and installing to /usr/local/bin without prompting.
 
@@ -64,25 +64,18 @@ curl iac.sh/tfc-psm-install | sh
 
 - System with Bash Shell (Linux, macOS, Windows Subsystem for Linux)
 - `unzip` - terraform downloads are in zip format
-- `curl` or `wget` - script will use either one to retrieve metadata and download
-
-Optional
-
-- `jq` - if installed, latest version parsed from hashicorp downloads
-  - Useful if latest github release differs from version on hashicorp downloads
-  - Avoids github api limit of 60 requests per hour (unauthenticated)
+- `curl` - used to retrieve metadata and download
 
 ## Script Process Details
 
 - Determines Version to Download and Install
   - Uses Version specified by `-i VERSION` parameter (if specified)
   - Otherwise determines Latest Version
-    - If `jq` installed parse version from hashicorp downloads
-    - Otherwise use GitHub API to retrieve latest version
+    - Uses GitHub API to retrieve latest version
 - Calculates Download URL based on Version, OS and CPU-Architecture
 - Verifies URL Validity before Downloading in Case:
   - VERSION incorrectly specified with `-i`
-  - Download URL Format Changed on terraform Website
+  - Download URL Format Changed
 - Determines Install Destination
   - Performed before Download/Install Process in case user selects `abort`
 - Installation Process
