@@ -12,8 +12,6 @@ The **tfc-psm-install** script automates the process of downloading and installi
 
 This script detects the latest version, OS and CPU-Architecture and allows installation to local or system locations.  Optional parameters allow installing a specific version and installing to /usr/local/bin without prompting.
 
-Example - install last pre-0.12 release: `./tfc-psm-install.sh -i 0.11.14`
-
 Options:
 
 - `-i VERSION`:  Install specific version
