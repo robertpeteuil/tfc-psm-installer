@@ -8,7 +8,7 @@
 
 ---
 
-The **tfc-psm-install** script automates the process of downloading and installing the `tfc-policy-sets-migration` utility.
+The **tfc-psm-install** script automates the process of downloading and installing the (tfc-policy-sets-migration)[https://github.com/hashicorp/tfc-policy-sets-migration] utility.
 
 This script detects the latest version, OS and CPU-Architecture and allows installation to local or system locations.  Optional parameters allow installing a specific version and installing to /usr/local/bin without prompting.
 
